@@ -15,9 +15,9 @@ describe('fetchBreedDescription', () => {
   });
   it('returns Error: "Breed does not exist" and sets desc to null if invalid/non-existent breed is passed in', (done) => {
     fetchBreedDescription('', (err, desc) => {
-      assert.equal(err, "Breed does not exist")
+      assert.equal(err, "Breed does not exist");
       assert.equal(desc, null);
       done();
     });
-  })
+  });
 });

@@ -5,7 +5,7 @@ const fetchBreedDescription = function(breedName, callback) {
   
   request.get(url, (error, response, body) => {
     if (error) {
-      callback(error)
+      callback(error);
     }
     if (body) {
       const data = JSON.parse(body);
@@ -13,11 +13,11 @@ const fetchBreedDescription = function(breedName, callback) {
         const desc = data[0].description;
         callback(error, desc);
       } else {
-        const error = "Breed does not exist"
-        const desc = null
-        callback(error, desc)
+        const error = "Breed does not exist";
+        const desc = null;
+        callback(error, desc);
       }
-    };
+    }
   });
 };
 
